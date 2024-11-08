@@ -17,4 +17,49 @@ offset_right = 340.0
 offset_bottom = 159.0
 text = "Powrót"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 90.0
+offset_top = 276.0
+offset_right = 1020.0
+offset_bottom = 2327.0
+theme_override_font_sizes/font_size = 25
+text = "Przygotowanie do gry:
+Ze standardowej talii kart wyciągnij po sześć kart (A, K, Q, J, 10, 9) w trzech kolorach (♣♥♠) 
+[Jeżeli nie korzystacie z zasad opcjonalnych, wartość kart nie ma znaczenia]
+
+Dodatkowo wyciągnij dwie karty w czwartym kolorze (♦)
+
+Wybierz karę dla przegranego (np. shot wódki)
+
+Zasady:
+1. Każdy z graczy dostaje 5 kart na rundę
+
+2. Na początku każdej rundy losowany jest kolor stołu (♣♥♠)
+
+3. Gracz może użyć karty w kolorze ♦  jako każdego innego koloru
+
+5. Podczas swojej tury gracz może wyłożyć maksymalnie trzy karty rewersem do góry, deklarując ją jako kartę w kolorze stołu
+
+6. Gracz może blefować, wykładając karty w kolorze innym niż kolor stołu
+
+7. Gracz może sprawdzić, jakie karty wyrzucił poprzedni gracz mówiąć \"Lecisz w chuja\" po czym odkrywa ostatnio rzucone karty
+
+8. Jeśli blef został odkryty, gracz, który wyrzucił karty innego koloru próbuje swojego szczęścia w ruletce
+
+9. Jeśli odkryte karty były w kolorze stołu, to gracz, który postanowił sprawdzić karty używa ruletki
+
+10. jeśli gracz wyrzuci wszystkie swoje karty, i nie zostanie sprawdzony, wychodzi z obiegu do końca rundy
+
+11. Gdy zostanie tylko dwóch graczy, ostatni gracz z kartami musi sprawdzić drugiego gracza
+
+12. Po spraedzeniu gracza runda się kończy, a zaczyna kolejna
+
+13. Jeśli po użyciu ruletki kolor gracza zmieni się na czerwony, a obok jego nazwy będzie widniał napis \"Martwy\" kończy on grę i musi wykonać ustaloną wcześniej karę 
+
+Zasady opcjonalne:
+
+1. As w kolorze stołu jest kartą diabła, oznacza to, że jeśli gracz sprawdzi karty, a rzut nie okaże się blefem i zawierać będzie tą kartę, każdy gracz, poza graczem który wyrzucił tą kartę używa ruletki"
+autowrap_mode = 3
+clip_text = true
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
