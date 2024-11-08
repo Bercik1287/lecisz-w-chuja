@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmwy8fx8tcoyj"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_tujkp"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tujkp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1080.0
+offset_bottom = 2400.0
+color = Color(0.393954, 0.236316, 0.0521809, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 270.0
+offset_top = 519.0
+offset_right = 779.0
+offset_bottom = 805.0
+theme_override_font_sizes/font_size = 74
+text = "Lecisz w chuja"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 216.0
+offset_top = 860.0
+offset_right = 870.0
+offset_bottom = 1098.0
+theme_override_font_sizes/font_size = 75
+text = "Start"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 214.0
+offset_top = 1481.0
+offset_right = 868.0
+offset_bottom = 1719.0
+theme_override_font_sizes/font_size = 75
+text = "Wyjście"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 214.0
+offset_top = 1180.0
+offset_right = 868.0
+offset_bottom = 1418.0
+theme_override_font_sizes/font_size = 75
+text = "Zasady"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

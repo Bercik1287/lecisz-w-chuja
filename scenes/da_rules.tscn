@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://wqmeqt2yg2ab"]
+
+[ext_resource type="Script" path="res://scripts/da_rules.gd" id="1_3cxqc"]
+
+[node name="DaRules" type="Node2D"]
+script = ExtResource("1_3cxqc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1080.0
+offset_bottom = 2400.0
+color = Color(0.393954, 0.236316, 0.0521809, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 47.0
+offset_top = 59.0
+offset_right = 340.0
+offset_bottom = 159.0
+text = "Powrót"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
