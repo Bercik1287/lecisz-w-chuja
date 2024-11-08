@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxhr8v5v2all2"]
+[gd_scene load_steps=3 format=3 uid="uid://dxhr8v5v2all2"]
 
 [ext_resource type="Script" path="res://scripts/table.gd" id="1_sbhe6"]
+
+[sub_resource type="Theme" id="Theme_657et"]
 
 [node name="Table" type="Node2D"]
 script = ExtResource("1_sbhe6")
@@ -11,38 +13,39 @@ offset_bottom = 2400.0
 color = Color(0.393954, 0.236316, 0.0521809, 1)
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 939.0
-offset_top = 27.0
-offset_right = 1051.0
-offset_bottom = 146.0
+offset_left = 940.0
+offset_top = 20.0
+offset_right = 1060.0
+offset_bottom = 140.0
 text = "home"
 
 [node name="bp1" type="Button" parent="."]
-offset_left = 75.0
-offset_top = 317.0
-offset_right = 233.0
-offset_bottom = 434.0
+offset_left = 130.0
+offset_top = 320.0
+offset_right = 290.0
+offset_bottom = 440.0
+theme = SubResource("Theme_657et")
 text = "Gracz 1 (0/6)"
 
 [node name="bp2" type="Button" parent="."]
-offset_left = 863.0
-offset_top = 317.0
-offset_right = 1021.0
-offset_bottom = 434.0
+offset_left = 790.0
+offset_top = 320.0
+offset_right = 950.0
+offset_bottom = 440.0
 text = "Gracz 2 (0/6)"
 
 [node name="bp3" type="Button" parent="."]
-offset_left = 107.0
-offset_top = 1118.0
-offset_right = 265.0
-offset_bottom = 1235.0
+offset_left = 130.0
+offset_top = 1900.0
+offset_right = 290.0
+offset_bottom = 2020.0
 text = "Gracz 3 (0/6)"
 
 [node name="bp4" type="Button" parent="."]
-offset_left = 871.0
-offset_top = 1110.0
-offset_right = 1029.0
-offset_bottom = 1227.0
+offset_left = 790.0
+offset_top = 1906.0
+offset_right = 950.0
+offset_bottom = 2026.0
 text = "Gracz 4 (0/6)"
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
