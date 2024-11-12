@@ -48,8 +48,23 @@ offset_right = 950.0
 offset_bottom = 2026.0
 text = "Gracz 4 (0/6)"
 
+[node name="btc" type="Button" parent="."]
+offset_left = 428.0
+offset_top = 981.0
+offset_right = 684.0
+offset_bottom = 1059.0
+text = "Losuj Kartę"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 423.0
+offset_top = 764.0
+offset_right = 1233.0
+offset_bottom = 1037.0
+theme_override_font_sizes/font_size = 200
+
 [connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="bp1" to="." method="_on_bp_1_pressed"]
 [connection signal="pressed" from="bp2" to="." method="_on_bp_2_pressed"]
 [connection signal="pressed" from="bp3" to="." method="_on_bp_3_pressed"]
 [connection signal="pressed" from="bp4" to="." method="_on_bp_4_pressed"]
+[connection signal="pressed" from="btc" to="." method="_on_btc_pressed"]

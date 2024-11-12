@@ -13,6 +13,8 @@ var p3tries = 0
 var p4tries = 0
 var color_change = 2
 
+var tc = 0
+
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
@@ -99,3 +101,13 @@ func _on_bp_4_pressed() -> void:
 		if(p4tries == p4):
 			$bp4.text = "Gracz 4 (Martwy)"
 			bp4_color_override(1,0,0,1)
+
+
+func _on_btc_pressed() -> void:
+	tc = rng.randi_range(1, 3)
+	if(tc == 1):
+		$Label.text = "♣"
+	elif(tc == 2):
+		$Label.text = "♥"
+	elif(tc == 3):
+		$Label.text = "♠"
