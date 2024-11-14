@@ -54,12 +54,16 @@ Zasady:
 
 12. Po spraedzeniu gracza runda się kończy, a zaczyna kolejna
 
-13. Jeśli po użyciu ruletki kolor gracza zmieni się na czerwony, a obok jego nazwy będzie widniał napis \"Martwy\" kończy on grę i musi wykonać ustaloną wcześniej karę 
-
-Zasady opcjonalne:
-
-1. As w kolorze stołu jest kartą diabła, oznacza to, że jeśli gracz sprawdzi karty, a rzut nie okaże się blefem i zawierać będzie tą kartę, każdy gracz, poza graczem który wyrzucił tą kartę używa ruletki"
+13. Jeśli po użyciu ruletki kolor gracza zmieni się na czerwony, a obok jego nazwy będzie widniał napis \"Martwy\" kończy on grę i musi wykonać ustaloną wcześniej karę "
 autowrap_mode = 3
 clip_text = true
 
+[node name="Button2" type="Button" parent="."]
+offset_left = 708.0
+offset_top = 59.0
+offset_right = 1001.0
+offset_bottom = 159.0
+text = "Zasady Opcjonalne"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

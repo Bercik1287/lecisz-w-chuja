@@ -58,6 +58,16 @@ func bp4_color_override(a: float, b: float, c: float, d: float) -> void:
 	$bp4.add_theme_color_override("font_pressed_color", Color(a,b,c,d))
 	$bp4.add_theme_color_override("font_focus_color", Color(a,b,c,d))
 	$bp4.add_theme_color_override("font_color", Color(a,b,c,d))
+	
+func spin() -> void:
+	for n in 10:
+		await get_tree().create_timer(0.05).timeout
+		$Suit.set_frame_and_progress(0, 0)
+		await get_tree().create_timer(0.05).timeout
+		$Suit.set_frame_and_progress(1, 0)
+		await get_tree().create_timer(0.05).timeout
+		$Suit.set_frame_and_progress(2, 0)
+		n = n+1
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
@@ -106,8 +116,11 @@ func _on_bp_4_pressed() -> void:
 func _on_btc_pressed() -> void:
 	tc = rng.randi_range(1, 3)
 	if(tc == 1):
-		$Label.text = "♣"
+		spin()
+		$Suit.set_frame_and_progress(0, 0)
 	elif(tc == 2):
-		$Label.text = "♥"
+		spin()
+		$Suit.set_frame_and_progress(1, 0)
 	elif(tc == 3):
-		$Label.text = "♠"
+		spin()
+		$Suit.set_frame_and_progress(2, 0)

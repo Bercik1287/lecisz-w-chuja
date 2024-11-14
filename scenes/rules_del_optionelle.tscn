@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://xdccft6gclbc"]
+
+[ext_resource type="Script" path="res://scripts/rules_del_optionelle.gd" id="1_a6o13"]
+
+[node name="RulesDelOptionelle" type="Node2D"]
+script = ExtResource("1_a6o13")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1080.0
+offset_bottom = 2400.0
+color = Color(0.393954, 0.236316, 0.0521809, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 276.0
+offset_right = 1020.0
+offset_bottom = 2327.0
+theme_override_font_sizes/font_size = 25
+text = "Zasady opcjonalne:
+
+A. Karta Diabła: As w kolorze stołu jest kartą diabła, oznacza to, że jeśli gracz sprawdzi karty, a rzut nie okaże się blefem i zawierać będzie tą kartę, każdy gracz, poza graczem który wyrzucił tą kartę używa ruletki. Karta diabła nie może być wyrzucona z innymi kartami.
+
+B. Zwodnicze Uno: 
+	*Przygotowanie do gry: dowolna talia Uno
+
+	*Zasady:
+		1. Każdy gracz dostaje 7 kart z talii
+
+		2. Po rozdaniu kart pierwszą kartę z talii kładzie się awersem do góry
+
+		3. Podczas swojej tury gracz wykłada kartę na stos rewersem do góry, deklarując rzut jako zgodny z zasadami Uno
+		
+		4. Gracz może robić \"schodki\" z kart z tym samym numerem podając kolor karty ze szczytu
+		
+		5. Gracz może blefować wykładając niepasującą kartę
+		
+		6. Gracz może sprawdzić, jakie karty wyrzucił poprzedni gracz mówiąc \"Lecisz w chuja\" po czym odkrywa ostatnio rzucone karty
+		
+		7. Jeśli blef został odkryty, gracz, który wyrzucił karty niepasujące do stosu używa ruletki
+		
+		8. Jeśli odkryte karty pasowały dos zczytu stosu, to gracz, któy postanowił sprawdzić karty używa ruletki
+		
+		9. Jeśli gracz zadeklarował blef jako kartę specjalną i został on odkryty, efekt zadeklarowanej karty przechodzi na tego gracza
+		
+		10. Gracz, który użył ruletki bierze z góry talii dwie karty, jeśli w ruletce trafiony był ślepak, lub 4 jeśli trafiony był nabój"
+autowrap_mode = 3
+clip_text = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 47.0
+offset_top = 59.0
+offset_right = 340.0
+offset_bottom = 159.0
+text = "Zasady Główne"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
